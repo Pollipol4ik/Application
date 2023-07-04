@@ -1,5 +1,6 @@
 package com.example.fubric_kr;
 
+import com.example.fubric_kr.animations.Shake;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,6 +11,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class Third_Fubric_Controller {
@@ -43,6 +46,8 @@ public class Third_Fubric_Controller {
 
     @FXML
     private Button personalAccount;
+    public static String num_cod_1;
+    public static String counter;
 
     @FXML
     void initialize() {
@@ -103,7 +108,23 @@ public class Third_Fubric_Controller {
             stage6.setScene(new Scene(root6));
             stage6.show();
         });
+        DataBaseHandler db = new DataBaseHandler();
+        Create.setOnAction(event -> {
+            db.changeComp(Integer.parseInt(countComp.getText()));
+            loginComp(numcod.getText(), countComp.getText());
+        });
+
+
+    }
+    private void loginComp(String code, String count) {
+        DataBaseHandler db = new DataBaseHandler();
+        Components components = new Components();
+        components.setNum_cod(Integer.parseInt(code));
+        components.setCount_in_fub(count);
+        ResultSet resalt =  db.getComp(components);
+            num_cod_1 = code;
+            counter = count;
+        }
 
     }
 
-}

@@ -1,23 +1,32 @@
 package com.example.fubric_kr;
 
+import javafx.beans.property.ReadOnlyObjectProperty;
+import javafx.beans.property.ReadOnlyStringWrapper;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.*;
 import java.util.ResourceBundle;
+import java.sql.Connection;
 
-public class First_Shop_Controller {
+public class First_Shop_Controller{
 
     @FXML
     private ResourceBundle resources;
     @FXML
-    private TableView<?> tblord;
+    public TableView<Orders> tblord ;
 
     @FXML
     private URL location;
@@ -26,15 +35,26 @@ public class First_Shop_Controller {
     private Button ordFurn;
 
     @FXML
-    private Button orders;
+    private Button orders_tec;
 
     @FXML
     private Button personalAccount;
+    private ObservableList<Orders> ordersData = FXCollections.observableArrayList();
+    public TableColumn<Orders, Integer> num;
+    public TableColumn<Orders, Integer> articul;
+    public TableColumn<Orders, String> coount;
+    public TableColumn<Orders, String> date;
+    Orders orders;
+    Connection connection = null;
+    Statement statement = null;
+    ResultSet rs = null;
+
+
 
     @FXML
     void initialize() {
-        orders.setOnAction(event -> {
-            orders.getScene().getWindow().hide();
+        orders_tec.setOnAction(event -> {
+            orders_tec.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("firstpageshop.fxml"));
             try {
@@ -76,6 +96,6 @@ public class First_Shop_Controller {
             stage2.show();
         });
 
-    }
 
+    }
 }

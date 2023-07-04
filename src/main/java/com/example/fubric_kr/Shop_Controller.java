@@ -93,7 +93,10 @@ public class Shop_Controller {
         }
         if (count>=1){
             System.out.println("SUPER");
+            Third_Shop_Controller.logUser = logintext;
+
             openFirst("firstpageshop.fxml");
+
         }
         else{
             Shake userlog = new Shake(loginField);

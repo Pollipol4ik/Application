@@ -99,6 +99,7 @@ public class Fabric_Controller {
         }
         if (count>=1){
             System.out.println("SUPER");
+            Fifth_Fubric_Controller.logUser2 = logintext;
             openNewSceneone("firstfub.fxml");
         }
         else{

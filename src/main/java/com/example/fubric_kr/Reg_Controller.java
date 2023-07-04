@@ -74,6 +74,7 @@ public class Reg_Controller {
         String user_password = passwordField.getText();
         Users users = new Users(second_name, first_name, number_phone, name_org, login, user_password);
         db.signUpUsers(users);
+        Second_Shop_Controller.logOrder = phoneNumber.getText();
     }
 
 }

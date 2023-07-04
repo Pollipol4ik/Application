@@ -4,49 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0dec5d7d-a3e5-4253-bceb-8596f82e9b0b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Configs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Const.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/DataBaseHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Fabric_Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Fifth_Fubric_Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/First_Fubric_Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/First_Shop_Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Fourth_Fubric_Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Reg_Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Second_Fubric_Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Second_Shop_Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Shop_Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Third_Fubric_Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Third_Shop_Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/animations/Shake.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/enter.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/enterFabric.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/enterShop.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/fifthfub.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/firstfub.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/firstpageshop.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/fourthfub.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/registration.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/secondfub.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/secondpageshop.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/thirdfub.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/thirdpageshop.fxml" afterDir="false" />
+    <list default="true" id="0dec5d7d-a3e5-4253-bceb-8596f82e9b0b" name="Changes" comment="Enter and redact">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Components.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Furniture_items.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Const.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/DataBaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/DataBaseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Fabric_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Fabric_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Fifth_Fubric_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Fifth_Fubric_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/First_Fubric_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/First_Fubric_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/First_Shop_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/First_Shop_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Reg_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Reg_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Second_Fubric_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Second_Fubric_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Second_Shop_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Second_Shop_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Shop_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Shop_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Third_Fubric_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Third_Fubric_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Third_Shop_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Third_Shop_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/firstpageshop.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/firstpageshop.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,13 +31,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JavaFXApplication" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -127,6 +103,21 @@
       <option name="presentableId" value="Default" />
       <updated>1688414608195</updated>
     </task>
+    <task id="LOCAL-00001" summary="Animation with db">
+      <created>1688433896184</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688433896184</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Enter and redact">
+      <created>1688437836178</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1688437836178</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -139,5 +130,20 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Animation with db" />
+    <MESSAGE value="Enter and redact" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enter and redact" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.RuntimeException" package="java.lang" />
+          <option name="timeStamp" value="8" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

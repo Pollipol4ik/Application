@@ -37,6 +37,8 @@ public class Third_Shop_Controller {
 
     @FXML
     private Button personalAccount;
+    public static String logUser;
+
 
     @FXML
     void initialize() {
@@ -84,10 +86,10 @@ public class Third_Shop_Controller {
         });
         DataBaseHandler db = new DataBaseHandler();
         Redact.setOnAction(event -> {
-            if(oldPassword.toString() == Const.USER_PASSWORD){
+            if (newPassword.toString() != oldPassword.toString()) {
                 db.changePassword(newPassword.getText());
-            }
-            else System.out.println("Error!");
+            } else
+                System.out.println("Error!");
             Redact.getScene().getWindow().hide();
             FXMLLoader loader2 = new FXMLLoader();
             loader2.setLocation(getClass().getResource("thirdpageshop.fxml"));

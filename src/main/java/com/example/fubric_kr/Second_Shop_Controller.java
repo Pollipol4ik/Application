@@ -10,7 +10,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
 import java.util.ResourceBundle;
+
+
 
 public class Second_Shop_Controller {
 
@@ -37,6 +40,7 @@ public class Second_Shop_Controller {
 
     @FXML
     private Button personalAccount;
+    public static String logOrder;
 
     @FXML
     void initialize() {
@@ -82,7 +86,20 @@ public class Second_Shop_Controller {
             stage2.setScene(new Scene(root2));
             stage2.show();
         });
+        DataBaseHandler db = new DataBaseHandler();
+        DoOrder.setOnAction(event -> {
+//            db.insOrders(orders.getText());
+//            loginComp(numcod.getText(), countComp.getText());
+        });
 
     }
-
+//    private void signUpNewUser() {
+//        DataBaseHandler db = new DataBaseHandler();
+//        String inf = articul.getText();
+//        String inf2 = countComponent.getText();
+//        Orders orders = new Orders();
+//        Users users = new Users(second_name, first_name, number_phone, name_org, login, user_password);
+//        db.insOrders(orders);
+//        Second_Shop_Controller.logOrder = phoneNumber.getText();
+//    }
 }

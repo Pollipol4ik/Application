@@ -30,6 +30,7 @@ public class Second_Fubric_Controller {
     @FXML
     private Button createFurn;
 
+
     @FXML
     private Label errorString;
 

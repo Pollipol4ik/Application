@@ -44,6 +44,8 @@ public class Fifth_Fubric_Controller {
     @FXML
     private Button personalAccount;
 
+    public static String logUser2;
+
     @FXML
     void initialize() {
         orders.setOnAction(event -> {
@@ -92,6 +94,39 @@ public class Fifth_Fubric_Controller {
             createFurn.getScene().getWindow().hide();
             FXMLLoader loader5 = new FXMLLoader();
             loader5.setLocation(getClass().getResource("fourthfub.fxml"));
+            try {
+                loader5.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Parent root5 = loader5.getRoot();
+            Stage stage5 = new Stage();
+            stage5.setScene(new Scene(root5));
+            stage5.show();
+        });
+        DataBaseHandler db = new DataBaseHandler();
+        Redact.setOnAction(event -> {
+            if (newPassword.toString() != oldPassword.toString()) {
+                db.changePasswordTwo(newPassword.getText());
+            } else
+                System.out.println("Error!");
+            Redact.getScene().getWindow().hide();
+            FXMLLoader loader2 = new FXMLLoader();
+            loader2.setLocation(getClass().getResource("fifthfub.fxml"));
+            try {
+                loader2.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Parent root2 = loader2.getRoot();
+            Stage stage2 = new Stage();
+            stage2.setScene(new Scene(root2));
+            stage2.show();
+        });
+        personalAccount.setOnAction(event -> {
+            personalAccount.getScene().getWindow().hide();
+            FXMLLoader loader5 = new FXMLLoader();
+            loader5.setLocation(getClass().getResource("fifthfub.fxml"));
             try {
                 loader5.load();
             } catch (IOException e) {

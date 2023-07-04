@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
 import java.util.ResourceBundle;
 
 public class First_Fubric_Controller {
@@ -20,7 +21,7 @@ public class First_Fubric_Controller {
     @FXML
     private URL location;
     @FXML
-    private TableView<?> tblord;
+    private TableView<Orders> tblord;
 
     @FXML
     private Button checkOrd;
@@ -36,6 +37,7 @@ public class First_Fubric_Controller {
 
     @FXML
     private Button personalAccount;
+
 
     @FXML
     void initialize() {
@@ -95,6 +97,7 @@ public class First_Fubric_Controller {
             stage6.setScene(new Scene(root6));
             stage6.show();
         });
+
     }
 
 }
