@@ -94,7 +94,7 @@ public class Shop_Controller {
         if (count>=1){
             System.out.println("SUPER");
             Third_Shop_Controller.logUser = logintext;
-
+            Second_Shop_Controller.logOrder = db.findFax(logintext).toString();
             openFirst("firstpageshop.fxml");
 
         }

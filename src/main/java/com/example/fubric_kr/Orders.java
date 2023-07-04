@@ -1,28 +1,34 @@
 package com.example.fubric_kr;
 
-import java.util.Map;
-
 public class Orders {
 
 
     private int num;
     private String shops_fax_num;
     private String date_order;
-    private int inf;
+    private String articul_id_furn;
+    private String count_pos;
 
-    public Orders(String num, String shops_fax_num, String date_order, int inf) {
-        this.num = Integer.parseInt(num);
+
+    public Orders(String articul_id_furn, String count_pos, String date_order){
+        this.date_order = date_order;
+        this.articul_id_furn = String.valueOf(articul_id_furn);
+        this.count_pos = String.valueOf(count_pos);
+    }
+    public Orders(int num, String shops_fax_num, String date_order, String articul_id_furn, String count_pos) {
+        this.num = num;
         this.shops_fax_num = shops_fax_num;
         this.date_order = date_order;
-        this.inf = inf;
+        this.articul_id_furn = String.valueOf(articul_id_furn);
+        this.count_pos = String.valueOf(count_pos);
     }
 
     public int getNum() {
         return num;
     }
 
-    public void setNum(String num) {
-        this.num = Integer.parseInt(num);
+    public void setNum(int num) {
+        this.num = num;
     }
 
     public String getShops_fax_num() {
@@ -41,13 +47,19 @@ public class Orders {
         this.date_order = date_order;
     }
 
-    public int getInf() {
-        return inf;
+    public String getArticul_id_furn() {
+        return articul_id_furn;
     }
 
-    public void setInf(Map<Integer, Integer> inf) {
-        this.inf = inf.size();
+    public void setArticul_id_furn(int articul_id_furn) {
+        this.articul_id_furn = String.valueOf(articul_id_furn);
     }
 
+    public String getCount_pos() {
+        return count_pos;
+    }
 
+    public void setCount_pos(int count_pos) {
+        this.count_pos = String.valueOf(count_pos);
+    }
 }

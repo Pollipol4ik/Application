@@ -6,6 +6,7 @@ module com.example.fubric_kr {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
     requires java.sql;
+    requires com.fasterxml.jackson.databind;
 
     opens com.example.fubric_kr to javafx.fxml;
     exports com.example.fubric_kr;

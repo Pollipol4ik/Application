@@ -1,5 +1,7 @@
 package com.example.fubric_kr;
 
+import javafx.scene.control.TextField;
+
 public class Users {
     private String second_name;
     private String first_name;

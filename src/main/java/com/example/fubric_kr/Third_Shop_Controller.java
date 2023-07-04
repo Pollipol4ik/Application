@@ -37,7 +37,7 @@ public class Third_Shop_Controller {
 
     @FXML
     private Button personalAccount;
-    public static String logUser;
+    public static String logUser = "";
 
 
     @FXML

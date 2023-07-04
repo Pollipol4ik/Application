@@ -4,24 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0dec5d7d-a3e5-4253-bceb-8596f82e9b0b" name="Changes" comment="Enter and redact">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Components.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Furniture_items.java" afterDir="false" />
+    <list default="true" id="0dec5d7d-a3e5-4253-bceb-8596f82e9b0b" name="Changes" comment="I want Json">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Const.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/DataBaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/DataBaseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Fabric_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Fabric_Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Fifth_Fubric_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Fifth_Fubric_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/First_Fubric_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/First_Fubric_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/First_Shop_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/First_Shop_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Orders.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Reg_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Reg_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Second_Fubric_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Second_Fubric_Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Second_Shop_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Second_Shop_Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Shop_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Shop_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Third_Fubric_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Third_Fubric_Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Third_Shop_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Third_Shop_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/firstpageshop.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/firstpageshop.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/secondpageshop.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/secondpageshop.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,22 +45,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "jdk.selected.JAVA_MODULE": "19",
-    "last_opened_file_path": "C:/Users/полина/IdeaProjects/Fubric_kr/src/main/resources/com/example/fubric_kr",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/полина/IdeaProjects/Fubric_kr/src/main/resources/com/example/fubric_kr&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\полина\IdeaProjects\Fubric_kr\src\main\resources\com\example\fubric_kr" />
@@ -117,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688437836178</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="I want Json">
+      <created>1688493826633</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1688493826633</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,7 +137,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Animation with db" />
     <MESSAGE value="Enter and redact" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enter and redact" />
+    <MESSAGE value="I want Json" />
+    <option name="LAST_COMMIT_MESSAGE" value="I want Json" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -143,6 +147,11 @@
           <properties class="java.lang.RuntimeException" package="java.lang" />
           <option name="timeStamp" value="8" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/fubric_kr/DataBaseHandler.java</url>
+          <line>135</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

@@ -1,9 +1,5 @@
 package com.example.fubric_kr;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.scene.control.TableView;
-
 import java.sql.*;
 
 public class DataBaseHandler {
@@ -135,33 +131,34 @@ public class DataBaseHandler {
 
     }
 
-    public ResultSet getItems(Furniture_items items)  {
-        String update = "SELECT DISTINCT FROM " + Const.COMPONENTS_TABLE;
 
-        try {
-            PreparedStatement preparedStatement = getConnection().prepareStatement(String.valueOf(items));
-            ResultSet resultSet = preparedStatement.executeQuery(update); // Возвращаем результат выполнения запроса
-            return resultSet;
-        } catch (Exception e) {
-            throw new RuntimeException("Ошибка при выполнении запроса: " + e.getMessage());
-        }
-    }
     public void insOrders(Orders orders) {
         String insert = "INSERT INTO " + Const.ORDERS_TABLE + "(" + Const.ORDERS_FAX_NUMBER + "," +
-                Const.ORDERS_DATE + "," + Const.ORDERS_INFORMATION + ")" +
-                "VALUES(?,?,'['?','?']')";
+                Const.ORDERS_DATE + "," + Const.ORDERS_ARTICUL + "," + Const.ORDERS_Count + ")" +
+                " VALUES(" + "'"+ Second_Shop_Controller.logOrder + "'" + ",?,?,?)";
         try {
             PreparedStatement ps1;
             ps1 = getConnection().prepareStatement(insert);
-            ps1.setString(1, orders.getShops_fax_num());
-            ps1.setString(2, orders.getDate_order());
-            ps1.setString(3, String.valueOf(orders.getInf()));
-            ps1.setString(4, String.valueOf(orders.getInf()));
+            ps1.setString(1, orders.getDate_order());
+            ps1.setString(2, orders.getArticul_id_furn());
+            ps1.setString(3, orders.getCount_pos());
             ps1.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
+    }
+    public ResultSet findFax(String login) {
+        String update = "SELECT "+ Const.USER_PHONE + " FROM " + Const.USER_TABLE + " WHERE " +
+                Const.USER_LOGIN + "=" + "'" + login +"'";
+
+        try {
+            PreparedStatement preparedStatement = getConnection().prepareStatement(String.valueOf(login));
+            ResultSet resultSet = preparedStatement.executeQuery(update); // Возвращаем результат выполнения запроса
+            return resultSet;
+        } catch (Exception e) {
+            throw new RuntimeException("Ошибка при выполнении запроса: " + e.getMessage());
+        }
     }
 }
 

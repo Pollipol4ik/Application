@@ -44,7 +44,7 @@ public class Fifth_Fubric_Controller {
     @FXML
     private Button personalAccount;
 
-    public static String logUser2;
+    public static String logUser2 = "";
 
     @FXML
     void initialize() {

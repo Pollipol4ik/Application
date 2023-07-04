@@ -13,6 +13,8 @@ import java.net.URL;
 import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 
 
 public class Second_Shop_Controller {
@@ -28,6 +30,8 @@ public class Second_Shop_Controller {
 
     @FXML
     private TextField articul;
+    @FXML
+    private TextField date;
 
     @FXML
     private TextField countComponent;
@@ -40,7 +44,7 @@ public class Second_Shop_Controller {
 
     @FXML
     private Button personalAccount;
-    public static String logOrder;
+    public static String logOrder = "";
 
     @FXML
     void initialize() {
@@ -88,18 +92,17 @@ public class Second_Shop_Controller {
         });
         DataBaseHandler db = new DataBaseHandler();
         DoOrder.setOnAction(event -> {
-//            db.insOrders(orders.getText());
-//            loginComp(numcod.getText(), countComp.getText());
+            signUpOrders();
         });
 
     }
-//    private void signUpNewUser() {
-//        DataBaseHandler db = new DataBaseHandler();
-//        String inf = articul.getText();
-//        String inf2 = countComponent.getText();
-//        Orders orders = new Orders();
-//        Users users = new Users(second_name, first_name, number_phone, name_org, login, user_password);
-//        db.insOrders(orders);
-//        Second_Shop_Controller.logOrder = phoneNumber.getText();
-//    }
+    private void signUpOrders() {
+        DataBaseHandler db = new DataBaseHandler();
+        String inf = articul.getText();
+        String inf2 = countComponent.getText();
+        String inf3 = date.getText();
+        Orders orders = new Orders(inf,inf2,inf3);
+        db.insOrders(orders);
+
+    }
 }

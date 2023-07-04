@@ -34,6 +34,7 @@
             <TextField fx:id="articul" layoutX="227.0" layoutY="99.0" prefHeight="26.0" prefWidth="245.0" promptText="Артикул" style="-fx-background-radius: 5;" />
             <TextField fx:id="countComponent" layoutX="227.0" layoutY="137.0" prefHeight="26.0" prefWidth="245.0" promptText="Количество" style="-fx-background-radius: 5;" />
             <Button fx:id="DoOrder" layoutX="228.0" layoutY="233.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: #3a8646; -fx-background-radius: 15;" text="Заказать" textFill="WHITE" />
+            <TextField fx:id="date" layoutX="227.0" layoutY="182.0" prefHeight="26.0" prefWidth="245.0" promptText="Дата" style="-fx-background-radius: 5;" />
          </children>
       </AnchorPane>
       <Label layoutX="83.0" layoutY="14.0" prefHeight="42.0" prefWidth="534.0" text="Мебельная фабрика &quot;ЭкоМебель&quot;" textFill="#3a8646">

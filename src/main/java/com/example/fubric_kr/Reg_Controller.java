@@ -64,7 +64,7 @@ public class Reg_Controller {
 
     }
 
-    private void signUpNewUser() {
+    public void signUpNewUser() {
         DataBaseHandler db = new DataBaseHandler();
         String second_name = lastName.getText();
         String first_name = name.getText();
@@ -74,7 +74,8 @@ public class Reg_Controller {
         String user_password = passwordField.getText();
         Users users = new Users(second_name, first_name, number_phone, name_org, login, user_password);
         db.signUpUsers(users);
-        Second_Shop_Controller.logOrder = phoneNumber.getText();
+        Second_Shop_Controller.logOrder = String.valueOf(phoneNumber);
+
     }
 
 }
