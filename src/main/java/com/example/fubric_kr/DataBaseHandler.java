@@ -1,5 +1,8 @@
 package com.example.fubric_kr;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.sql.*;
 
 public class DataBaseHandler {
@@ -135,7 +138,7 @@ public class DataBaseHandler {
     public void insOrders(Orders orders) {
         String insert = "INSERT INTO " + Const.ORDERS_TABLE + "(" + Const.ORDERS_FAX_NUMBER + "," +
                 Const.ORDERS_DATE + "," + Const.ORDERS_ARTICUL + "," + Const.ORDERS_Count + ")" +
-                " VALUES(" + "'"+ Second_Shop_Controller.logOrder + "'" + ",?,?,?)";
+                " VALUES(" + "'" + Second_Shop_Controller.logOrder + "'" + ",?,?,?)";
         try {
             PreparedStatement ps1;
             ps1 = getConnection().prepareStatement(insert);
@@ -148,18 +151,38 @@ public class DataBaseHandler {
         }
 
     }
+
     public ResultSet findFax(String login) {
-        String update = "SELECT "+ Const.USER_PHONE + " FROM " + Const.USER_TABLE + " WHERE " +
-                Const.USER_LOGIN + "=" + "'" + login +"'";
+        String update = "SELECT " + Const.USER_PHONE + " FROM " + Const.USER_TABLE + " WHERE " +
+                Const.USER_LOGIN + "=" + "'" + login + "'";
 
         try {
             PreparedStatement preparedStatement = getConnection().prepareStatement(String.valueOf(login));
-            ResultSet resultSet = preparedStatement.executeQuery(update); // Возвращаем результат выполнения запроса
+            ResultSet resultSet = preparedStatement.executeQuery(update); //
             return resultSet;
         } catch (Exception e) {
             throw new RuntimeException("Ошибка при выполнении запроса: " + e.getMessage());
         }
     }
+    public ObservableList<OrdersForTable> getOrders()
+    {
+        Connection conn = getConnection();
+        ObservableList<OrdersForTable> list = FXCollections.observableArrayList();
+        try {
+            PreparedStatement preparedStatement = conn.prepareStatement( "select * from orders");
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                list.add(new OrdersForTable(Integer.parseInt(resultSet.getString("num")), resultSet.getString("shops_fax_num"),
+                        resultSet.getString("date_order"), resultSet.getString("articul_id_furn"),
+                        resultSet.getString("count_pos")));
+            }
+        }catch (Exception e){
+
+        }
+        return list;
+    }
+
+
 }
 
 //select (json_extract(json_keys(inf_component),'$[0]')), (json_extract(json_keys(inf_component),'$[*]'))

@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fubric_kr.First_Shop_Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fubric_kr.First_Shop_Controller">
    <children>
       <AnchorPane layoutY="73.0" prefHeight="327.0" prefWidth="700.0" style="-fx-background-color: #7B68EE;">
          <children>
@@ -32,12 +32,12 @@
                </font>
             </Label>
             <Line endX="56.800018310546875" endY="0.4000091552734375" layoutX="338.0" layoutY="41.0" startX="-105.00000762939453" startY="1.52587890625E-5" stroke="WHITE" strokeWidth="2.0" />
-            <TableView fx:id="tblord" layoutX="232.0" layoutY="80.0" prefHeight="200.0" prefWidth="443.0">
+            <TableView fx:id="tblord" layoutX="232.0" layoutY="91.0" prefHeight="200.0" prefWidth="443.0">
                <columns>
-                  <TableColumn prefWidth="126.39994812011719" text="Номер заказа" />
-                  <TableColumn prefWidth="84.0" text="Артикукл" />
-                  <TableColumn prefWidth="127.20010375976562" text="Количество" />
-                  <TableColumn prefWidth="103.99998779296874" text="Дата" />
+                  <TableColumn fx:id="num_ord" prefWidth="111.19993591308594" text="Номер заказа" />
+                  <TableColumn fx:id="date" prefWidth="91.20001220703125" text="Дата" />
+                  <TableColumn fx:id="articul" minWidth="0.0" prefWidth="97.60000610351562" text="Артикул" />
+                  <TableColumn fx:id="count" prefWidth="143.19989013671875" text="Количество" />
                </columns>
             </TableView>
          </children>

@@ -22,11 +22,30 @@ import java.util.ResourceBundle;
 import java.sql.Connection;
 
 public class First_Shop_Controller{
+    @FXML
+    private TableColumn<OrdersForTable, String> articul;
+
+    @FXML
+    private TableColumn<OrdersForTable, String> count;
+
+
+    @FXML
+    private TableColumn<OrdersForTable, String> date;
+
+    @FXML
+    private TableColumn<OrdersForTable,Integer> num_ord;
+    @FXML
+    private TableView<OrdersForTable> tblord;
+    ObservableList<OrdersForTable> ordersData ;
+    int index = -1;
+    Connection conn = null;
+    ResultSet resultSet = null;
+    PreparedStatement preparedStatement = null;
+
 
     @FXML
     private ResourceBundle resources;
-    @FXML
-    public TableView<Orders> tblord ;
+
 
     @FXML
     private URL location;
@@ -39,15 +58,7 @@ public class First_Shop_Controller{
 
     @FXML
     private Button personalAccount;
-    private ObservableList<Orders> ordersData = FXCollections.observableArrayList();
-    public TableColumn<Orders, Integer> num;
-    public TableColumn<Orders, Integer> articul;
-    public TableColumn<Orders, String> coount;
-    public TableColumn<Orders, String> date;
-    Orders orders;
-    Connection connection = null;
-    Statement statement = null;
-    ResultSet rs = null;
+
 
 
 
@@ -95,7 +106,13 @@ public class First_Shop_Controller{
             stage2.setScene(new Scene(root2));
             stage2.show();
         });
-
-
+        DataBaseHandler db = new DataBaseHandler();
+        num_ord.setCellValueFactory(new PropertyValueFactory<OrdersForTable, Integer>("num"));
+        date.setCellValueFactory(new PropertyValueFactory<OrdersForTable, String>("date_order"));
+        articul.setCellValueFactory(new PropertyValueFactory<OrdersForTable, String>("articul_id_furn"));
+        count.setCellValueFactory(new PropertyValueFactory<OrdersForTable, String>("count_pos"));
+        ordersData = db.getOrders();
+        tblord.setItems(ordersData);
     }
+
 }

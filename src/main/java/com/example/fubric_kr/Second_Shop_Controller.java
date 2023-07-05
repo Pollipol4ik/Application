@@ -10,11 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.ResultSet;
 import java.util.ResourceBundle;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 
 
 public class Second_Shop_Controller {

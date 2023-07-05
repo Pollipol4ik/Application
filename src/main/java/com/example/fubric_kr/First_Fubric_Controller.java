@@ -1,30 +1,34 @@
 package com.example.fubric_kr;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
 public class First_Fubric_Controller {
 
     @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-    @FXML
-    private TableView<Orders> tblord;
+    private TableColumn<OrdersForTable, String> articul;
 
     @FXML
     private Button checkOrd;
+
+    @FXML
+    private TableColumn<OrdersForTable, String> count;
 
     @FXML
     private Button createComp;
@@ -33,11 +37,27 @@ public class First_Fubric_Controller {
     private Button createFurn;
 
     @FXML
+    private TableColumn<OrdersForTable, String> date;
+
+    @FXML
+    private TableColumn<OrdersForTable,Integer> num_ord;
+
+    @FXML
     private Button orders;
 
     @FXML
     private Button personalAccount;
 
+    @FXML
+    private TableColumn<OrdersForTable, String > shop;
+
+    @FXML
+    private TableView<OrdersForTable> tblord;
+   ObservableList<OrdersForTable> ordersData ;
+    int index = -1;
+    Connection conn = null;
+    ResultSet resultSet = null;
+    PreparedStatement preparedStatement = null;
 
     @FXML
     void initialize() {
@@ -97,7 +117,32 @@ public class First_Fubric_Controller {
             stage6.setScene(new Scene(root6));
             stage6.show();
         });
+        orders.setOnAction(event -> {
+            orders.getScene().getWindow().hide();
+            FXMLLoader loader6 = new FXMLLoader();
+            loader6.setLocation(getClass().getResource("fifthfub.fxml"));
+            try {
+                loader6.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Parent root6 = loader6.getRoot();
+            Stage stage6 = new Stage();
+            stage6.setScene(new Scene(root6));
+            stage6.show();
+        });
+        DataBaseHandler db = new DataBaseHandler();
+        num_ord.setCellValueFactory(new PropertyValueFactory<OrdersForTable, Integer>("num"));
+        shop.setCellValueFactory(new PropertyValueFactory<OrdersForTable, String>("shops_fax_num"));
+        date.setCellValueFactory(new PropertyValueFactory<OrdersForTable, String>("date_order"));
+        articul.setCellValueFactory(new PropertyValueFactory<OrdersForTable, String>("articul_id_furn"));
+        count.setCellValueFactory(new PropertyValueFactory<OrdersForTable, String>("count_pos"));
+        ordersData = db.getOrders();
+        tblord.setItems(ordersData);
 
     }
+
+
+
 
 }

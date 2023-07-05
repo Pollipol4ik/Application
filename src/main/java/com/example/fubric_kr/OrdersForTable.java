@@ -1,6 +1,6 @@
 package com.example.fubric_kr;
 
-public class Orders {
+public class OrdersForTable {
 
 
     private int num;
@@ -10,7 +10,9 @@ public class Orders {
     private String count_pos;
 
 
-    public Orders(String articul_id_furn, String count_pos, String date_order){
+    public OrdersForTable(int num, String shops_fax_num, String date_order, String articul_id_furn, String count_pos) {
+        this.num = num;
+        this.shops_fax_num = shops_fax_num;
         this.date_order = date_order;
         this.articul_id_furn = String.valueOf(articul_id_furn);
         this.count_pos = String.valueOf(count_pos);
@@ -57,4 +59,5 @@ public class Orders {
     public void setCount_pos(int count_pos) {
         this.count_pos = String.valueOf(count_pos);
     }
+
 }
