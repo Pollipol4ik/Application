@@ -107,7 +107,7 @@ public class Fifth_Fubric_Controller {
         DataBaseHandler db = new DataBaseHandler();
         Redact.setOnAction(event -> {
             if (newPassword.toString() != oldPassword.toString()) {
-                db.changePasswordTwo(newPassword.getText());
+                db.changePasswordTwo(String.valueOf(newPassword.getText().hashCode()));
             } else
                 System.out.println("Error!");
             Redact.getScene().getWindow().hide();

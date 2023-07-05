@@ -11,6 +11,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class Fourth_Fubric_Controller {
@@ -107,6 +110,52 @@ public class Fourth_Fubric_Controller {
             stage6.setScene(new Scene(root6));
             stage6.show();
         });
+        create.setOnAction(event -> {
+            signFurnitureItems();
+        });
+
+
+    }
+
+    public void signFurnitureItems() {
+        DataBaseHandler db = new DataBaseHandler();
+        String articleNumberText = articleNumber.getText();
+        String countPosText = countPos.getText();
+        ResultSet s = db.getFurnItems(articleNumberText);
+        String[] inf = {};
+        ArrayList<String[]> next = new ArrayList<>();
+        boolean flag = true;
+        try {
+            s.next();
+            inf = s.getString("inf_component").replace("{", "").replace("}", "").split(",");
+            String[] pair;
+            int countFromDB = 0;
+            for (String i : inf) {
+                pair = i.replace("\"", "").replace(" ", "").split(":");
+                s = db.getItemsCount(pair[0]);
+                s.next();
+                countFromDB = Integer.parseInt(s.getString("count_in_fub"));
+                int num = Integer.parseInt(pair[1]);
+                if (countFromDB >= num * Integer.parseInt(countPosText)) {
+                    next.add(new String[]{pair[0], String.valueOf(num * Integer.parseInt(countPosText))});
+                } else {
+                    flag = false;
+                }
+            }
+            if (flag) {
+                for (String[] i:next) {
+                    db.changeCount(Integer.parseInt(i[1]), i[0]);
+                }
+                db.changeIt(Integer.parseInt(countPosText), articleNumberText);
+            }
+
+            else{
+                errorString.setText("Нехватает компонентов:");
+            }
+            //System.out.println(inf);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
 
     }

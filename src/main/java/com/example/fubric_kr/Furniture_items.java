@@ -7,14 +7,24 @@ public class Furniture_items {
     private String type;
     private double price;
     private String lines_furniture_id;
-    private Map<Integer, Integer> inf;
+    //private Map<Integer, Integer> inf;
+    private int count_pos;
 
-    public Furniture_items(int articul, String type, double price, String lines_furniture_id, Map<Integer, Integer> inf) {
+    public Furniture_items(int articul, String type, double price, String lines_furniture_id, Map<Integer, Integer> inf, int count_pos) {
         this.articul = articul;
         this.type = type;
         this.price = price;
         this.lines_furniture_id = lines_furniture_id;
-        this.inf = inf;
+        //this.inf = inf;
+        this.count_pos = count_pos;
+    }
+
+    public int getCount_pos() {
+        return count_pos;
+    }
+
+    public void setCount_pos(int count_pos) {
+        this.count_pos = count_pos;
     }
 
     public int getArticul() {
@@ -49,11 +59,11 @@ public class Furniture_items {
         this.lines_furniture_id = lines_furniture_id;
     }
 
-    public Map<Integer, Integer> getInf() {
-        return inf;
-    }
-
-    public void setInf(Map<Integer, Integer> inf) {
-        this.inf = inf;
-    }
+//    public Map<Integer, Integer> getInf() {
+//        return inf;
+//    }
+//
+//    public void setInf(Map<Integer, Integer> inf) {
+//        this.inf = inf;
+//    }
 }

@@ -94,7 +94,14 @@ public class Shop_Controller {
         if (count>=1){
             System.out.println("SUPER");
             Third_Shop_Controller.logUser = logintext;
-            Second_Shop_Controller.logOrder = String.valueOf(db.findFax(logintext));
+            ResultSet r  =  db.findFax(logintext);
+            try {
+                r.next();
+                Second_Shop_Controller.logOrder = r.getString("number_phone");
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+
             openFirst("firstpageshop.fxml");
 
         }

@@ -111,7 +111,7 @@ public class First_Shop_Controller{
         date.setCellValueFactory(new PropertyValueFactory<OrdersForTable, String>("date_order"));
         articul.setCellValueFactory(new PropertyValueFactory<OrdersForTable, String>("articul_id_furn"));
         count.setCellValueFactory(new PropertyValueFactory<OrdersForTable, String>("count_pos"));
-        ordersData = db.getOrders();
+        ordersData = db.getOrdersTwo();
         tblord.setItems(ordersData);
     }
 

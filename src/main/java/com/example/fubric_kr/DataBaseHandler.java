@@ -3,6 +3,10 @@ package com.example.fubric_kr;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import javax.crypto.spec.PBEKeySpec;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
+import java.security.spec.KeySpec;
 import java.sql.*;
 
 public class DataBaseHandler {
@@ -80,7 +84,7 @@ public class DataBaseHandler {
             PreparedStatement ps1;
             ps1 = getConnection().prepareStatement(select);
             ps1.setString(1, users.getLogin());
-            ps1.setString(2, users.getUser_password());
+            ps1.setString(2, String.valueOf(users.getUser_password().hashCode()));
             res = ps1.executeQuery();
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -97,7 +101,7 @@ public class DataBaseHandler {
             PreparedStatement ps1;
             ps1 = getConnection().prepareStatement(select);
             ps1.setString(1, users.getLogin());
-            ps1.setString(2, users.getUser_password());
+            ps1.setString(2, String.valueOf(users.getUser_password().hashCode()));
             res2 = ps1.executeQuery();
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -120,7 +124,7 @@ public class DataBaseHandler {
 
     }
 
-    public ResultSet getComp(Components componentsn) {
+    public ResultSet getCfomp(Components componentsn) {
         String update = "SELECT * FROM " + Const.COMPONENTS_TABLE;
 
         try {
@@ -164,22 +168,138 @@ public class DataBaseHandler {
             throw new RuntimeException("Ошибка при выполнении запроса: " + e.getMessage());
         }
     }
-    public ObservableList<OrdersForTable> getOrders()
-    {
+
+    public ObservableList<OrdersForTable> getOrders() {
         Connection conn = getConnection();
         ObservableList<OrdersForTable> list = FXCollections.observableArrayList();
         try {
-            PreparedStatement preparedStatement = conn.prepareStatement( "select * from orders");
+            PreparedStatement preparedStatement = conn.prepareStatement("select * from orders");
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 list.add(new OrdersForTable(Integer.parseInt(resultSet.getString("num")), resultSet.getString("shops_fax_num"),
                         resultSet.getString("date_order"), resultSet.getString("articul_id_furn"),
                         resultSet.getString("count_pos")));
             }
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
         return list;
+    }
+
+    public ObservableList<OrdersForTable> getOrdersTwo() {
+        Connection conn = getConnection();
+        ObservableList<OrdersForTable> list = FXCollections.observableArrayList();
+        try {
+            PreparedStatement preparedStatement = conn.prepareStatement("select * from orders" + " where " + Const.ORDERS_FAX_NUMBER +
+                    "=" + "'" + Second_Shop_Controller.logOrder + "'");
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                list.add(new OrdersForTable(Integer.parseInt(resultSet.getString("num")), resultSet.getString("shops_fax_num"),
+                        resultSet.getString("date_order"), resultSet.getString("articul_id_furn"),
+                        resultSet.getString("count_pos")));
+            }
+        } catch (Exception e) {
+
+        }
+        return list;
+    }
+
+    public void changeCountItems(int count, String articul) {
+        String update = "UPDATE " + Const.ITEMS_TABLE + " SET " + Const.ITEMS_COUNT + "=" + Const.ITEMS_COUNT + "-" + count
+                + " WHERE " + Const.ITEMS_ARTICUL + "=" + "'" + articul + "'";
+        try {
+            PreparedStatement ps1;
+            ps1 = getConnection().prepareStatement(update);
+            ps1.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public ResultSet getOrder(String num) {
+        ResultSet res2 = null;
+        String select = "SELECT articul_id_furn, count_pos  FROM " + Const.ORDERS_TABLE + " WHERE " +
+                Const.ORDERS_NUMBER + "= " + "'" + num + "'";
+        try {
+            PreparedStatement ps1;
+            ps1 = getConnection().prepareStatement(select);
+            res2 = ps1.executeQuery();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return res2;
+
+    }
+
+    public ResultSet getItems(String num) {
+        ResultSet res2 = null;
+        String select = "SELECT count_pos  FROM " + Const.ITEMS_TABLE + " WHERE " +
+                Const.ITEMS_ARTICUL + "= " + "'" + num + "'";
+        try {
+            PreparedStatement ps1;
+            ps1 = getConnection().prepareStatement(select);
+            res2 = ps1.executeQuery();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return res2;
+
+    }
+
+    public ResultSet getFurnItems(String articul) {
+        ResultSet res2 = null;
+        String select = "SELECT inf_component  FROM " + Const.ITEMS_TABLE + " WHERE " +
+                Const.ITEMS_ARTICUL + "= " + "'" + articul + "'";
+        try {
+            PreparedStatement ps1;
+            ps1 = getConnection().prepareStatement(select);
+            res2 = ps1.executeQuery();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return res2;
+
+    }
+
+    public ResultSet getItemsCount(String code) {
+        ResultSet res2 = null;
+        String select = "SELECT count_in_fub  FROM " + Const.COMPONENTS_TABLE + " WHERE " +
+                Const.COMPONENTS_CODE + "= " + "'" + code + "'";
+        try {
+            PreparedStatement ps1;
+            ps1 = getConnection().prepareStatement(select);
+            res2 = ps1.executeQuery();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return res2;
+
+    }
+
+    public void changeCount(int count, String code) {
+        String update = "UPDATE " + Const.COMPONENTS_TABLE + " SET " + Const.COMPONENTS_COUNT + "=" + Const.COMPONENTS_COUNT + "-" + count
+                + " WHERE " + Const.COMPONENTS_CODE + "=" + "'" + code + "'";
+        try {
+            PreparedStatement ps1;
+            ps1 = getConnection().prepareStatement(update);
+            ps1.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+    public void changeIt(int count, String articul) {
+        String update = "UPDATE " + Const.ITEMS_TABLE + " SET " + Const.ITEMS_COUNT + "=" + Const.ITEMS_COUNT + "+" + count
+                + " WHERE " + Const.ITEMS_ARTICUL + "=" + "'" + articul + "'";
+        try {
+            PreparedStatement ps1;
+            ps1 = getConnection().prepareStatement(update);
+            ps1.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
 

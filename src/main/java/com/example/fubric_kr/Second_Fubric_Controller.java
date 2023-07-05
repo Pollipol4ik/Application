@@ -6,11 +6,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class Second_Fubric_Controller {
@@ -31,11 +34,9 @@ public class Second_Fubric_Controller {
     private Button createFurn;
 
 
-    @FXML
-    private Label errorString;
 
     @FXML
-    private Label errorStringcomp;
+    private Label errorString;
 
     @FXML
     private TextField numberord;
@@ -108,8 +109,45 @@ public class Second_Fubric_Controller {
             stage6.setScene(new Scene(root6));
             stage6.show();
         });
+        treet.setOnAction(event -> {
+            signOrder();
 
+        });
+
+
+
+
+        }
+    public void signOrder () {
+        DataBaseHandler db = new DataBaseHandler();
+        String num = numberord.getText();
+        ResultSet s = db.getOrder(num);
+        String art = "";
+        String count = "";
+        try {
+            s.next();
+            art = s.getString("articul_id_furn");
+            count = s.getString("count_pos");
+            //System.out.println(art + count);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        ResultSet r = db.getItems(art);
+        Integer count_tec  = 0;
+        try {
+            r.next();
+            count_tec = r.getInt("count_pos");
+            //System.out.println(count_tec);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        if (count_tec >= Integer.parseInt(count)){
+            db.changeCountItems(Integer.parseInt(count), art);
+        }
+        else {
+            errorString.setText("Необходимо создать мебель из данного заказа!");
+        }
 
     }
 
-}
+    }

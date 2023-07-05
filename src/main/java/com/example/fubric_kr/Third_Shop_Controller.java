@@ -87,7 +87,7 @@ public class Third_Shop_Controller {
         DataBaseHandler db = new DataBaseHandler();
         Redact.setOnAction(event -> {
             if (newPassword.toString() != oldPassword.toString()) {
-                db.changePassword(newPassword.getText());
+                db.changePassword(String.valueOf(newPassword.getText().hashCode()));
             } else
                 System.out.println("Error!");
             Redact.getScene().getWindow().hide();

@@ -121,7 +121,7 @@ public class Third_Fubric_Controller {
         Components components = new Components();
         components.setNum_cod(Integer.parseInt(code));
         components.setCount_in_fub(count);
-        ResultSet resalt =  db.getComp(components);
+        ResultSet resalt =  db.getCfomp(components);
             num_cod_1 = code;
             counter = count;
         }

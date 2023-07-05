@@ -71,10 +71,10 @@ public class Reg_Controller {
         String number_phone = phoneNumber.getText();
         String name_org = nameOrg.getText();
         String login = loginField.getText();
-        String user_password = passwordField.getText();
+        String user_password = String.valueOf(passwordField.getText().hashCode());
         Users users = new Users(second_name, first_name, number_phone, name_org, login, user_password);
         db.signUpUsers(users);
-        Second_Shop_Controller.logOrder = String.valueOf(phoneNumber);
+        Second_Shop_Controller.logOrder = number_phone;
 
     }
 

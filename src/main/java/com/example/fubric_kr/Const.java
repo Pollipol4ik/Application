@@ -26,8 +26,9 @@ public class Const {
     public static final String ITEMS_TYPE = "type";
     public static final String ITEMS_PRICE = "price";
     public static final String ITEMS_LINES = "lines_furniture_id";
-    public static final String ITEMS_ = "inf_component";
-    public static final String ORDERS_TABLETwo = "orders";
+    public static final String ITEMS_INFORMATION = "inf_component";
+    public static final String ITEMS_COUNT = "count_pos";
+
 
 
 }

@@ -14,8 +14,8 @@ public class OrdersForTable {
         this.num = num;
         this.shops_fax_num = shops_fax_num;
         this.date_order = date_order;
-        this.articul_id_furn = String.valueOf(articul_id_furn);
-        this.count_pos = String.valueOf(count_pos);
+        this.articul_id_furn = articul_id_furn;
+        this.count_pos = count_pos;
     }
 
 

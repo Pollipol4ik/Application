@@ -16,6 +16,9 @@ public class Orders {
         this.count_pos = String.valueOf(count_pos);
     }
 
+    public Orders() {
+
+    }
 
 
     public int getNum() {
