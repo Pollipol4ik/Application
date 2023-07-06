@@ -303,6 +303,17 @@ public class DataBaseHandler {
     }
 
 
+    public void deleteOrder(int  num) {
+        String update = "DELETE FROM orders WHERE " + Const.ORDERS_NUMBER  + "=" + num;
+        try {
+            PreparedStatement ps1;
+            ps1 = getConnection().prepareStatement(update);
+            ps1.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
 }
 
 //select (json_extract(json_keys(inf_component),'$[0]')), (json_extract(json_keys(inf_component),'$[*]'))

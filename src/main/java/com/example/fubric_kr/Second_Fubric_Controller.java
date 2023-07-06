@@ -143,6 +143,7 @@ public class Second_Fubric_Controller {
         }
         if (count_tec >= Integer.parseInt(count)){
             db.changeCountItems(Integer.parseInt(count), art);
+            db.deleteOrder(Integer.parseInt(num));
         }
         else {
             errorString.setText("Необходимо создать мебель из данного заказа!");
