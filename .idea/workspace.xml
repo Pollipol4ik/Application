@@ -9,13 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0dec5d7d-a3e5-4253-bceb-8596f82e9b0b" name="Changes" comment="Final result">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Fubric_kr_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/MainJar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+    <list default="true" id="0dec5d7d-a3e5-4253-bceb-8596f82e9b0b" name="Changes" comment="Final result 2.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/DataBaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/DataBaseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Second_Fubric_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Second_Fubric_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Fourth_Fubric_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Fourth_Fubric_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/firstfub.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/firstfub.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/firstpageshop.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/firstpageshop.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/secondfub.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/fubric_kr/secondfub.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688598074682</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Final result 2.0">
+      <created>1688608774721</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1688608774721</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -161,7 +167,8 @@
     <MESSAGE value="With orders" />
     <MESSAGE value="Super Version" />
     <MESSAGE value="Final result" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final result" />
+    <MESSAGE value="Final result 2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final result 2.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -170,16 +177,6 @@
           <properties class="java.lang.RuntimeException" package="java.lang" />
           <option name="timeStamp" value="8" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/fubric_kr/Fourth_Fubric_Controller.java</url>
-          <line>133</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/fubric_kr/DataBaseHandler.java</url>
-          <line>172</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

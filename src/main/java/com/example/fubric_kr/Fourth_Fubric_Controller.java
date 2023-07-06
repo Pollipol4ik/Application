@@ -150,7 +150,7 @@ public class Fourth_Fubric_Controller {
             }
 
             else{
-                errorString.setText("Нехватает компонентов:");
+                errorString.setText("Не хватает компонентов");
             }
             //System.out.println(inf);
         } catch (SQLException e) {
